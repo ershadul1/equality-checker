@@ -1,6 +1,7 @@
 {
   "dependencies": {
-    "eslint-config-airbnb": "^18.2.1"
+    "eslint-config-airbnb": "^18.2.1",
+    "http-server": "^0.12.3"
   },
   "name": "equality-checker",
   "description": "Checks if two inputs are equal. Built with vanilla javascript, HTML and bootstrap.",
@@ -14,7 +15,8 @@
     "stylelint-scss": "3.17.x"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx http-server"
   },
   "repository": {
     "type": "git",
