@@ -1,0 +1,29 @@
+{
+  "dependencies": {
+    "eslint-config-airbnb": "^18.2.1"
+  },
+  "name": "equality-checker",
+  "description": "Checks if two inputs are equal. Built with vanilla javascript, HTML and bootstrap.",
+  "version": "1.0.0",
+  "main": "main.js",
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "stylelint": "13.3.x",
+    "stylelint-config-standard": "20.0.x",
+    "stylelint-csstree-validator": "^1.9.0",
+    "stylelint-scss": "3.17.x"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ershadul1/equality-checker.git"
+  },
+  "author": "Ershadul Hakim Rayhan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ershadul1/equality-checker/issues"
+  },
+  "homepage": "https://github.com/ershadul1/equality-checker#readme"
+}
