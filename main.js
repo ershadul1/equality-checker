@@ -1,14 +1,14 @@
 const resetAlertColor = () => {
   const alert = document.getElementById('result');
-  alert.className = 'alert mt-5'
-}
+  alert.className = 'alert mt-5';
+};
 
 const changeAlert = (message, color) => {
   const alert = document.getElementById('result');
   resetAlertColor();
   alert.classList.add(`alert-${color}`);
   alert.innerHTML = message;
-}
+};
 
 const checkInputs = () => {
   const inputOne = document.getElementById('input-1');
@@ -27,7 +27,7 @@ const clearInputs = () => {
   document.getElementById('input-1').value = '';
   document.getElementById('input-2').value = '';
   changeAlert('Add inputs to check equality', 'primary');
-}
+};
 
 const checkButton = document.getElementById('check-btn');
 
@@ -40,4 +40,4 @@ const clearButton = document.getElementById('clear-btn');
 
 clearButton.addEventListener('click', () => {
   clearInputs();
-})
+});
