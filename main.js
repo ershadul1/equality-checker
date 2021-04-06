@@ -1,31 +1,43 @@
-const checkButton = document.getElementById('check-btn');
+const resetAlertColor = () => {
+  const alert = document.getElementById('result');
+  alert.className = 'alert mt-5'
+}
 
-const one = document.getElementById('input-1');
-const two = document.getElementById('input-2');
+const changeAlert = (message, color) => {
+  const alert = document.getElementById('result');
+  resetAlertColor();
+  alert.classList.add(`alert-${color}`);
+  alert.innerHTML = message;
+}
 
-const alert = document.getElementById('result');
+const checkInputs = () => {
+  const inputOne = document.getElementById('input-1');
+  const inputTwo = document.getElementById('input-2');
 
-const checkInputs = (inputOne, inputTwo) => {
   if (inputOne.value.length === 0 && inputTwo.value.length === 0) {
-    if (alert.className.split(' ').includes('alert-danger')) {
-      alert.classList.remove('alert-danger');
-    }
-    if (alert.className.split(' ').includes('alert-success')) {
-      alert.classList.remove('alert-success');
-    }
-    alert.innerHTML = 'Add inputs to check equality';
+    changeAlert('Add inputs to check equality', 'primary');
   } else if (inputOne.value === inputTwo.value) {
-    alert.classList.remove('alert-danger');
-    alert.classList.add('alert-success');
-    alert.innerHTML = 'The inputs are equal';
+    changeAlert('The inputs are equal', 'success');
   } else {
-    alert.classList.remove('alert-success');
-    alert.classList.add('alert-danger');
-    alert.innerHTML = 'The inputs are not equal';
+    changeAlert('The inputs are not equal', 'danger');
   }
 };
 
+const clearInputs = () => {
+  document.getElementById('input-1').value = '';
+  document.getElementById('input-2').value = '';
+  changeAlert('Add inputs to check equality', 'primary');
+}
+
+const checkButton = document.getElementById('check-btn');
+
 checkButton.addEventListener('click', (e) => {
   e.preventDefault();
-  checkInputs(one, two);
+  checkInputs();
 });
+
+const clearButton = document.getElementById('clear-btn');
+
+clearButton.addEventListener('click', () => {
+  clearInputs();
+})
